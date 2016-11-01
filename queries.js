@@ -19,6 +19,7 @@ export default {
             }
         },
         resolve(root, params, options) {
+            console.log(UserModel.findById(params.id).exec(), 'lalalala');
             return UserModel.findById(params.id).exec();
         }
     }

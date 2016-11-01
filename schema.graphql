@@ -1,0 +1,22 @@
+type Mutation {
+  addUser(data: UserInput!): Boolean
+}
+
+type Query {
+  user(id: String): User
+}
+
+type Task {
+  id: String
+  text: String
+}
+
+type User {
+  id: String
+  name: String
+  tasks: [Task]
+}
+
+input UserInput {
+  name: String
+}
